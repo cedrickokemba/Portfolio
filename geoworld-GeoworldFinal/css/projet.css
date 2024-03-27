@@ -1,0 +1,107 @@
+/* Couleurs pour le thème clair */
+:root {
+  --background-color: #ffffff;
+  --text-color: #3b3737;
+}
+
+/* Couleurs pour le thème sombre */
+[data-theme="dark"] {
+  --background-color: #474747;
+  --text-color: #ffffff;
+}
+
+/* Styles pour le bouton */
+#theme-toggle {
+  background: #fff;
+  border: none;
+  padding: 2px 5px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  width: 100px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transform: skew(-21deg);
+}
+
+span {
+  display: inline-block;
+  transform: skew(21deg);
+}
+
+#theme-toggle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: 0;
+  background: rgb(39, 39, 39);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+#theme-toggle:hover {
+  color: #fff;
+}
+
+#theme-toggle:hover::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+/* Styles pour les éléments qui changent de couleur avec le thème */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] body {
+  font-weight : bold;
+  color: #ffffff;
+}
+
+table {
+  color: red;
+}
+
+[data-theme="dark"] table {
+  color: #ff9999;
+}
+
+.buton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  border: solid 3px transparent;
+  background-clip: padding-box;
+  box-shadow: 0px 0px 0px 3px #ffffff00;
+  color: white;
+  min-height: 43px;
+  padding: 0 13px 0 13px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all .5s ease;
+}
+
+.buton:active {
+  transform: scale(.9);
+  transition: all 100ms ease;
+}
+
+.buton:hover {
+  box-shadow: 0px 0px 0px 3px #30a1b8;
+}
+
+.buton svg {
+  width: 16px;
+}
+
+p {
+  color: #30a1b8;
+}

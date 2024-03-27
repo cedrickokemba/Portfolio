@@ -1,0 +1,45 @@
+= *Compte rendue du projet Geoworld*
+
+== *Developpeur*
+
+====
+Baptiste Rodrigues,
+Cedrick Loïck OKEMBA MEBOUKOU,
+Marvin Akaro Jeux
+Samy ICHALALENE
+
+====
+
+== *Les modifications que nous avons apporté au site.*
+
+====
+Tous d'abord nous avons décidez d'incorporer un thème sombre au site.
+Nous avons aussi créer une page d'inscription, de login, avec une base de données crée pour recevoir toute les informations qui auront été entrée. Nous vons ajouter une encoche de recherche connecter à internet pour pouvoir trouver ce qui nous interresse sans quitter le site geoworld. Nous avons créer une page devellopeur et dans cette affiche il y'a les informmations concernant les personnes qui ont participer au projet. 
+====
+
+== *Les problèmes que nous avons rencontré.*
+
+====
+En voulant ajouté un thème sombre nous nous somme aperçu que le tableau ou est affiché les villes n'était plus visible même en changeant les couleurs dans le CSS
+
+Nous avons rencontrer un autre problème qui est que la page d'incription n'arrive pas à renvoyer les informations d'incriptions  dans la base de données.
+
+La page de connexion ne fonctionnais pas non plus.
+====
+
+== *Comment nous avons regler les probleme qui ont survenus*.
+
+====
+Pour resoudre le probleme concernant le mode sombre: 
+
+Nous avons cherecehrer sur internet les differentes sollutions qui aurais pu nous permettre de resoudre le probleme et nous sommes tomber sur quelqu'un qui expliquait le proceder pour pouvoir mettre le mode sombre.
+
+Pour la page d'incription(register.php) pour resoudre le probleme nous avons utiliser la methode global $pdo Cette ligne permet d'accéder à la variable $pdo qui représente la connexion à la base de données.
+Après avoir utilisé le global$pdo la connection a été établie et les donner rentrer dans le register lors de l'incription étais envoyer directement à la base de donner.
+
+Pour regler le probleme de la page de connection nous avons utiler la methode post.
+
+La methode Post est utiliser pour envoyer des donnée depuis un formulaire html vers un script php sur un serveur.
+
+Nous avons utiliser la kmethode POST car les données envoyées via POST sont plus securiseées que celle envoyées via la methode GET, qui sont visible dans l'URL et peuvent etre intercepter par des tiers.
+
